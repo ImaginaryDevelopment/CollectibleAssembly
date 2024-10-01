@@ -1,0 +1,9 @@
+dotnet new sln
+dotnet new .gitignore
+mkdir src
+cd src
+dotnet new console --output CHost
+dotnet new console --output FHost -lang=F#
+cd ..
+dotnet sln add .\src\CHost\CHost.csproj
+dotnet sln add .\src\FHost\FHost.fsproj
